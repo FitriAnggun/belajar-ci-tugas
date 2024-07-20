@@ -40,4 +40,11 @@ $routes->get('contact', 'Home::contact', ['filter' => 'auth']);
 
 $routes->group('api', function ($routes) {
     $routes->post('monthly', 'ApiController::monthly');
+    $routes->post('yearly', 'ApiController::yearly');
+});
+
+$routes->group('transaksi', ['filter' => 'auth'], function ($routes) {
+    $routes->get('', 'TransaksiController::index_');
+    $routes->post('status', 'TransaksiController::status');
+    $routes->get('download', 'TransaksiController::download');
 });
