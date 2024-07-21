@@ -44,7 +44,7 @@ $routes->group('api', function ($routes) {
 });
 
 $routes->group('transaksi', ['filter' => 'auth'], function ($routes) {
-    $routes->get('', 'TransaksiController::index_');
-    $routes->post('status', 'TransaksiController::status');
-    $routes->get('download', 'TransaksiController::download');
+    $routes->get('', 'TransaksiController::transaksi');
+    $routes->post('updateStatus', 'TransaksiController::updateStatus');
+    $routes->get('downloadTransaksi', 'TransaksiController::downloadTransaksi');
 });

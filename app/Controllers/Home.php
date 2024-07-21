@@ -20,12 +20,13 @@ class Home extends BaseController
         $this->transaction = new TransactionModel();
         $this->transaction_detail = new TransactionDetailModel();
     }
+
     public function index(): string
     {
         $product = $this->product->findAll();
         $data['product'] = $product;
 
-        return view('v_home');
+        return view('v_home', $data);
     }
 
     public function faq()

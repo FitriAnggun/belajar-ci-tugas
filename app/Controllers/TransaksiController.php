@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\TransactionModel;
 use App\Models\TransactionDetailModel;
+use Dompdf\Dompdf;
 
 class TransaksiController extends BaseController
 {

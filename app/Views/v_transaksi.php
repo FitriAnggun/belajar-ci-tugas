@@ -15,7 +15,7 @@
     </div>
 <?php endif; ?>
 
-<a type="button" class="btn btn-success" href="<?= base_url() ?>transaksi/download">Download Data</a>
+<a type="button" class="btn btn-success" href="<?= base_url() ?>transaksi/downloadTransaksi">Download Data</a>
 
 <table class="table datatable">
     <thead>
@@ -51,7 +51,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form method="post" action="<?= base_url('transaksi/status') ?>">
+                                <form method="post" action="<?= base_url('transaksi/updateStatus') ?>">
                                     <?= csrf_field() ?>
                                     <input type="hidden" name="id" value="<?= $transaction['id'] ?>">
                                     <div class="mb-3">
