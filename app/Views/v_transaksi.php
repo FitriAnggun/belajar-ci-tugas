@@ -73,7 +73,7 @@
             </td>
         </tr>
         <?php endforeach;?>
-            </tbody>
+    </tbody>
 </table>
 
 <?= $this->endSection() ?>

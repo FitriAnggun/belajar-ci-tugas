@@ -40,7 +40,7 @@ $routes->get('contact', 'Home::contact', ['filter' => 'auth']);
 
 $routes->group('api', function ($routes) {
     $routes->post('monthly', 'ApiController::monthly');
-    $routes->post('yearly', 'ApiController::yearly');
+    $routes->post('annually', 'ApiController::annually');
 });
 
 $routes->group('transaksi', ['filter' => 'auth'], function ($routes) {
